@@ -1,0 +1,57 @@
+@import "../../colors";
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    margin: 0;
+    font-weight: 600;
+    &__title {
+        font-size: 5em;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__text {
+        max-width: 80vw;
+        text-align: center;
+        margin: 1.5em 0 0 0;
+        line-height: 1.5em;
+    }
+    &__button-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 1.25em 0 0 0;
+        font-size: 1.5em;
+        &__button {
+            border: black 2px solid;
+            margin: 1em;
+            padding: 0.75em 0;
+            width: 35vw;
+            text-align: center;
+            color: black;
+            transition: ease-in-out 0.25s;
+        }
+        @media screen and (max-width: 500px) {
+            &__button{
+                width: 40vw;
+                margin: 0 .5em;
+            }
+        }
+        &__button:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+    @media screen and (min-width: 800px) {
+        &__text {
+            max-width: 55vw;
+        }
+    }
+}
+
+.margin-about{
+    padding: 5em 0 ;
+}

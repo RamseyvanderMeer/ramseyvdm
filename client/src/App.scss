@@ -1,0 +1,75 @@
+@import "./colors.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    //TODO: temp fix for side scroll moblie veiw
+    overflow: hidden;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+//fadein css
+
+.fade-in-sectionleft {
+    opacity: 0;
+    transform: translateX(20vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+.fade-in-sectionleft.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.fade-in-sectionright {
+    opacity: 0;
+    transform: translateX(-20vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+.fade-in-sectionright.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.fade-in-sectionup {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+.fade-in-sectionup.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.fade-in-sectiondown {
+    opacity: 0;
+    transform: translateY(-20vh);
+    visibility: hidden;
+    transition: opacity 2400ms ease-out, transform 1200ms ease-out, visibility 2400ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+.fade-in-sectiondown.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
