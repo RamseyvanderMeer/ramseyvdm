@@ -33,7 +33,7 @@ router.post('/upload', (req, res) => {
             return res.status(400).json({ msg: 'incorrect file formatt' })
         }
 
-        cloudinary.v2.uploader.upload(file.tempFilePath, { folder: "IEEE" }, async (err, result) => {
+        cloudinary.v2.uploader.upload(file.tempFilePath, { folder: "ramseyvdm" }, async (err, result) => {
             if (err) throw err
             removeTmp(file.tempFilePath)
             res.json({ public_id: result.public_id, url: result.secure_url })

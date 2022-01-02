@@ -1,1 +1,9 @@
 node_modules
+
+client/build.zip
+
+client/node_modules.zip
+
+tmp/
+
+.env

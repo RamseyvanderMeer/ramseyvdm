@@ -1,7 +1,7 @@
 {
-  "name": "ramseyvdm",
+  "name": "ramsey",
   "version": "1.0.0",
-  "description": "personal portfolio with node.js",
+  "description": "persoal portfolio using node.js",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RamseyvanderMeer/ramsewyvdm.git"
+    "url": "git+https://github.com/RamseyvanderMeer/ramseyvdm.git"
   },
   "author": "",
   "license": "ISC",

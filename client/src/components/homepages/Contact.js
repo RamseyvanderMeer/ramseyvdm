@@ -103,9 +103,10 @@ const Contact = () => {
                         Socials:
                     </p>
                     <div className="contact-media">
-                        <a href="https://github.com/RamseyvanderMeer" alt="github" className="fab fa-github"></a>
-                        <a href="https://www.facebook.com/ieeeuiuc" alt="facebook" className="fab fa-facebook"></a>
-                        <a href="https://www.instagram.com/rasmeyvandermeer/" alt="instagram" className="fab fa-instagram"></a>
+                        <a href="https://github.com/ramseyvandermeer" alt="github" className="fab fa-github"></a>
+                        <a href="https://www.facebook.com/ramseyvandermeer" alt="facebook" className="fab fa-facebook"></a>
+                        <a href="https://www.instagram.com/ieee.uiuc/" alt="instagram" className="fab fa-instagram"></a>
+                        {/* <a href="https://discord.gg/Gc9qPBxzbS" alt="discord" className="fab fa-discord"></a> */}
                     </div>
                 </div>
             </div>
