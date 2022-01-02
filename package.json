@@ -1,7 +1,7 @@
 {
-  "name": "IEEE-UIUC",
+  "name": "ramseyvdm",
   "version": "1.0.0",
-  "description": "IEEE UIUC Branch Website",
+  "description": "personal portfolio with node.js",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RamseyvanderMeer/IEEE.git"
+    "url": "git+https://github.com/RamseyvanderMeer/ramsewyvdm.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RamseyvanderMeer/IEEE/issues"
+    "url": "https://github.com/RamseyvanderMeer/ramseyvdm/issues"
   },
-  "homepage": "https://github.com/RamseyvanderMeer/IEEE#readme",
+  "homepage": "https://github.com/RamseyvanderMeer/ramseyvdm#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.26.0",

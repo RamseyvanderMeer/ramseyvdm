@@ -94,28 +94,18 @@ const Contact = () => {
                 </div> */}
                 <div className="contact__container__info">
                     <p className="contact__container__info__title">
-                        Mailing Address:
-                    </p>
-                    <i className="contact__container__info__text">
-                        IEEE UIUC Student Branch
-                        <br />ECE Building, Room 1016
-                        <br />306 N. Wright St.
-                        <br />Urbana, IL 61801
-                    </i>
-                    <p className="contact__container__info__title">
                         Email Address:
                     </p>
                     <i className="contact__container__info__text">
-                        ieee.uiuc@gmail.com
+                        ramseyvandermeer@gmail.com
                     </i>
                     <p className="contact__container__info__title__social">
                         Socials:
                     </p>
                     <div className="contact-media">
-                        <a href="https://github.com/ieee-uiuc" alt="github" className="fab fa-github"></a>
+                        <a href="https://github.com/RamseyvanderMeer" alt="github" className="fab fa-github"></a>
                         <a href="https://www.facebook.com/ieeeuiuc" alt="facebook" className="fab fa-facebook"></a>
-                        <a href="https://www.instagram.com/ieee.uiuc/" alt="instagram" className="fab fa-instagram"></a>
-                        <a href="https://discord.gg/Gc9qPBxzbS" alt="discord" className="fab fa-discord"></a>
+                        <a href="https://www.instagram.com/rasmeyvandermeer/" alt="instagram" className="fab fa-instagram"></a>
                     </div>
                 </div>
             </div>

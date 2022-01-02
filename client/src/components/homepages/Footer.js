@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="main-contact">
 
                 <div className="footer">
-                    <p>IEEE UIUC Branch 2021</p>
+                    <p>Ramsey van der Meer 2021</p>
                 </div>
 
             </div>

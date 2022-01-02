@@ -14,7 +14,7 @@ const Board = () => {
         <div className="board">
             <div className="board__container">
                 <h2 className="board__title">
-                    IEEE Exec Board
+                    Photography
                 </h2>
 
                 {dataBoard && <div className="board__person">
