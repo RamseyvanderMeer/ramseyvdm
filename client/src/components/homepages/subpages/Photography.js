@@ -13,9 +13,7 @@ const Photography = () => {
     return (
         <div className="photography">
             <div className="photography__container">
-                <h2 className="photography__title">
-                    Photography
-                </h2>
+                <h2 className="photography__title">Photography</h2>
 
                 {dataPhotography && <div className="photography__person">
                     <FadeIn direction={'left'}>
@@ -36,22 +34,11 @@ const Photography = () => {
                     </FadeIn>
                 </div>}
 
-                {!dataPhotography && <div className="photography__person">
+                {!dataPhotography && <div className="photography__card">
                     {photography.map((item) => (
                         <FadeIn direction={'left'}>
-                            <div className="photography__person__card" key={item._id}>
-                                <div className="photography__person__card__image">
-                                    <img className="photography__person__card__img" src={item.images.url} alt={item._id} />
-                                </div>
-                                <p className="photography__person__card__name">
-                                    {item.name}
-                                </p>
-                                <i className="photography__person__card__title">
-                                    {item.title}
-                                </i>
-                                <p className="photography__person__card__description">
-                                    {item.description}
-                                </p>
+                            <div className="photography__card__image" key={item._id}>
+                                <img className="photography__card__image__img" src={item.images.url} alt={item.key} />
                             </div>
                         </FadeIn>
 
