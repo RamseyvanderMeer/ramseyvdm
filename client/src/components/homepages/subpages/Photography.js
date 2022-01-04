@@ -13,7 +13,7 @@ const Photography = () => {
     return (
         <div className="photography">
             <div className="photography__container">
-                <h2 className="photography__title">Photography</h2>
+                {/* <h2 className="photography__title">Photography</h2> */}
 
                 {dataPhotography && <div className="photography__person">
                     <FadeIn direction={'left'}>

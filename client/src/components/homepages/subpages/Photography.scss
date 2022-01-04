@@ -4,11 +4,13 @@
     position: relative;
     width: 100vw;
     min-height: $pageHeight;
+    background-color: rgb(25, 25, 25);
+    border-top: 1px rgb(200, 200, 200) solid;
     &__container {
         padding: 1em 0;
     }
     &__title {
-        color: black;
+        color: white;
         font-size: 4.5em;
         text-align: center;
         // text-shadow: 0.6px 0.6px 2px $dark;
@@ -26,7 +28,7 @@
             list-style-type: none;
             flex-grow: 1;
             overflow: hidden;
-            margin: 0 1px 1px 1px ;
+            margin: 0 1px 1px 1px;
 
             &:hover img {
                 transform: scale(1.025);
