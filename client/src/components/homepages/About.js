@@ -28,7 +28,7 @@ const About = () => {
                         <Link to={'/join'} className="about__button-container__button">
                             Learn More
                         </Link>
-                        <Link to={'/board'} className="about__button-container__button">
+                        <Link to={'/photography'} className="about__button-container__button">
                             Photography
                         </Link>
                     </div>

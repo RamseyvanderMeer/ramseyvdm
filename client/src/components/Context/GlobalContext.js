@@ -8,11 +8,11 @@ export const DataProvider = ({ children }) => {
     const [about, setAbout] = useState([]);
     const [social, setSocial] = useState([]);
     const [events, setEvents] = useState([]);
-    const [board, setBoard] = useState([]);
+    const [photography, setPhotography] = useState([]);
     const [loginFin, setLoginFin] = useState(true);
     const [dataAbout, setDataAbout] = useState(true);
     const [dataSocial, setDataSocial] = useState(true);
-    const [dataBoard, setDataBoard] = useState(true);
+    const [dataPhotography, setDataPhotography] = useState(true);
     const [dataEvents, setDataEvents] = useState(true);
 
 
@@ -58,11 +58,11 @@ export const DataProvider = ({ children }) => {
         setSocial(social.data);
         setDataSocial(false)
 
-        // ...for fetchning board...
-        const res3 = await axios.get(`/fetchboard`);
+        // ...for fetchning photography...
+        const res3 = await axios.get(`/fetchphotography`);
         // console.log(res3.data);
-        setBoard(res3.data);
-        setDataBoard(false)
+        setPhotography(res3.data);
+        setDataPhotography(false)
 
         // ...for fetching events
         const res4 = await axios.get(`/event`);
@@ -73,7 +73,7 @@ export const DataProvider = ({ children }) => {
 
     useEffect(() => {
         try {
-            if (dataAbout || dataSocial || dataBoard || dataEvents) {
+            if (dataAbout || dataSocial || dataPhotography || dataEvents) {
                 fetchData();
             }
 
@@ -87,12 +87,12 @@ export const DataProvider = ({ children }) => {
     const state = {
         about: [about, setAbout],
         social: [social, setSocial],
-        board: [board, setBoard],
+        photography: [photography, setPhotography],
         events: [events, setEvents],
         isLogin: [isLogin, setIsLogin],
         dataAbout: [dataAbout, setDataAbout],
         dataSocial: [dataSocial, setDataSocial],
-        dataBoard: [dataBoard, setDataBoard],
+        dataPhotography: [dataPhotography, setDataPhotography],
         dataEvents: [dataEvents, setDataEvents],
         loginFin: [loginFin, setLoginFin]
     }

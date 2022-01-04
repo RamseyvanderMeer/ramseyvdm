@@ -4,7 +4,7 @@ import Navbar from './components/homepages/Navbar'
 import About from './components/homepages/About'
 import PastEvents from './components/homepages/PastEvents'
 import UpcomingEvents from './components/homepages/UpcomingEvents'
-import Board from './components/homepages/subpages/Board'
+import Photography from './components/homepages/subpages/Photography'
 import Contact from './components/homepages/Contact'
 import Login from './components/homepages/Login'
 import Register from './components/homepages/Register'
@@ -19,7 +19,7 @@ import Admin from './components/adminComponents/Admin'
 import EditAbout from './components/editComponents/EditAbout'
 import EditSocial from './components/editComponents/EditSocial'
 import EditEvents from './components/editComponents/EditEvents'
-import EditBoard from './components/editComponents/EditBoard'
+import EditPhotography from './components/editComponents/EditPhotography'
 
 import { Route } from 'react-router-dom'
 import { Element } from 'react-scroll'
@@ -64,10 +64,10 @@ function App() {
       <Route exact path='/admin' render={() => isLogin ? <Admin /> : <Login />} />
       <Route exact path='/editSocial/:id' component={EditSocial} />
       <Route exact path='/editEvent/:id' component={EditEvents} />
-      <Route exact path='/editBoard/:id' component={EditBoard} />
+      <Route exact path='/editPhotography/:id' component={EditPhotography} />
       <Route exact path='/editAbout/:id' component={EditAbout} />
       <Route exact path='/join' component={SignUp} />
-      <Route exact path='/board' component={Board} />
+      <Route exact path='/photography' component={Photography} />
       <Route exact path='/calendar' component={Calendar} />
       <Route exact path='/about' component={About} />
 

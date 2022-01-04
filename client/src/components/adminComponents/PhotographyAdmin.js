@@ -10,13 +10,13 @@ const initialState = {
     name: ''
 }
 
-const BoardsAdmin = () => {
+const PhotographysAdmin = () => {
 
-    const [board, setBoard] = useState(initialState)
+    const [photography, setPhotography] = useState(initialState)
     const [images, setImages] = useState(false)
     const [message, setMessage] = useState('')
     const [messageCond, setMessageCond] = useState(false)
-    const [boardData, setBoardData] = useState([])
+    const [photographyData, setPhotographyData] = useState([])
 
 
     //upload
@@ -66,7 +66,7 @@ const BoardsAdmin = () => {
 
         const { name, value } = e.target
 
-        setBoard({ ...board, [name]: value })
+        setPhotography({ ...photography, [name]: value })
         // console.log(product.description)
         // console.log(product.title)
         // console.log(product.product_id)
@@ -76,12 +76,12 @@ const BoardsAdmin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('/fetchboard', { ...board, images })
+            const res = await axios.post('/fetchphotography', { ...photography, images })
             setMessage(res.data.msg)
             setTimeout(() => {
                 setMessage('')
             }, 2000)
-            setBoard(initialState)
+            setPhotography(initialState)
             setImages(false)
         } catch (error) {
             console.log(error)
@@ -97,8 +97,8 @@ const BoardsAdmin = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/fetchboard`)
-                setBoardData(res.data)
+                const res = await axios.get(`/fetchphotography`)
+                setPhotographyData(res.data)
                 // console.log(res.data)
 
             } catch (error) {
@@ -109,15 +109,15 @@ const BoardsAdmin = () => {
     }, [])
 
     //delete functionality
-    const deleteBoard = async (id) => {
+    const deletePhotography = async (id) => {
         //delete from ui
-        const filterBoard = boardData.filter(item => item._id !== id)
+        const filterPhotography = photographyData.filter(item => item._id !== id)
 
-        setBoardData(filterBoard)
+        setPhotographyData(filterPhotography)
 
         //delete from data base
         try {
-            const res = await axios.delete(`/fetchboard/${id}`)
+            const res = await axios.delete(`/fetchphotography/${id}`)
             setMessageCond(true)
             setMessage(res.data.msg)
             setTimeout(() => {
@@ -134,13 +134,13 @@ const BoardsAdmin = () => {
         <div className="same-component">
             <div className="same-form">
                 <form onSubmit={handleSubmit}>
-                    <h4> Board Event component </h4>
+                    <h4> Photography Event component </h4>
 
                     <label htmlFor="text">id</label>
                     <input type="text"
                         name="product_id"
                         id="product_id"
-                        value={board.product_id}
+                        value={photography.product_id}
                         onChange={handleChangeInput}
                         required
                     />
@@ -149,7 +149,7 @@ const BoardsAdmin = () => {
                     <input type="text"
                         name="title"
                         id="title"
-                        value={board.title}
+                        value={photography.title}
                         onChange={handleChangeInput}
                         required
                     />
@@ -158,7 +158,7 @@ const BoardsAdmin = () => {
                     <input type="text"
                         name="name"
                         id="name"
-                        value={board.name}
+                        value={photography.name}
                         onChange={handleChangeInput}
                         required
                     />
@@ -166,7 +166,7 @@ const BoardsAdmin = () => {
                     <label htmlFor="text">Description</label>
                     <textarea name="description"
                         id="description"
-                        value={board.description}
+                        value={photography.description}
                         onChange={handleChangeInput}
                         required
                         cols="30"
@@ -195,11 +195,11 @@ const BoardsAdmin = () => {
             </div>
             <div className="same-item">
                 <div className="about-info">
-                    {boardData.map((item) => (
+                    {photographyData.map((item) => (
                         <div className="events-admin" key={item._id}>
                             <div className="icons">
-                                <Link to={`/editBoard/${item._id}`}><i className="fas fa-edit"></i></Link>
-                                <i className="fas fa-trash" onClick={() => deleteBoard(item._id)}></i>
+                                <Link to={`/editPhotography/${item._id}`}><i className="fas fa-edit"></i></Link>
+                                <i className="fas fa-trash" onClick={() => deletePhotography(item._id)}></i>
                             </div>
 
                             <div className="single-event">
@@ -221,4 +221,4 @@ const BoardsAdmin = () => {
     )
 }
 
-export default BoardsAdmin
+export default PhotographysAdmin

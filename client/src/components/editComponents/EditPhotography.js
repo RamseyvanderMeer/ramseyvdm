@@ -10,9 +10,9 @@ const initialState = {
     name: ''
 }
 
-const EditBoard = (props) => {
+const EditPhotography = (props) => {
 
-    const [board, setBoards] = useState(initialState)
+    const [photography, setPhotographys] = useState(initialState)
     const [images, setImages] = useState(false)
     const [message, setMessage] = useState('')
     const history = useHistory()
@@ -65,15 +65,15 @@ const EditBoard = (props) => {
 
         const { name, value } = e.target
 
-        setBoards({ ...board, [name]: value })
+        setPhotographys({ ...photography, [name]: value })
     }
 
     //getting data
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/fetchboard/${props.match.params.id}`)
-                setBoards({
+                const res = await axios.get(`/fetchphotography/${props.match.params.id}`)
+                setPhotographys({
                     product_id: res.data.product_id,
                     name: res.data.name,
                     title: res.data.title,
@@ -90,7 +90,7 @@ const EditBoard = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.put(`/fetchboard/update/${props.match.params.id}`, { ...board, images })
+            const res = await axios.put(`/fetchphotography/update/${props.match.params.id}`, { ...photography, images })
             setMessage(res.data.msg)
 
             setImages(false)
@@ -113,13 +113,13 @@ const EditBoard = (props) => {
                     <div className="same-form">
                         <form onSubmit={handleSubmit}>
                             <h3 className="updated">{message}</h3>
-                            <h4>Board components</h4>
+                            <h4>Photography components</h4>
                             <label htmlFor="text">Id</label>
                             <input
                                 type="text"
                                 name="product_id"
                                 required id="product_id"
-                                value={board.product_id}
+                                value={photography.product_id}
                                 onChange={handleChangeInput}
                             />
 
@@ -128,7 +128,7 @@ const EditBoard = (props) => {
                                 type="text"
                                 name="title"
                                 required
-                                value={board.title}
+                                value={photography.title}
                                 onChange={handleChangeInput}
                                 id="title" />
                             <label htmlFor="text">name</label>
@@ -136,14 +136,14 @@ const EditBoard = (props) => {
                                 type="text"
                                 name="name"
                                 required
-                                value={board.name}
+                                value={photography.name}
                                 onChange={handleChangeInput}
                                 id="name" />
 
                             <label htmlFor="text">Description</label>
                             <textarea type="text"
                                 name="description"
-                                value={board.description}
+                                value={photography.description}
                                 onChange={handleChangeInput}
                                 required id="description" cols="30" rows="3" />
 
@@ -173,4 +173,4 @@ const EditBoard = (props) => {
     )
 }
 
-export default EditBoard
+export default EditPhotography

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const boardSchema = new mongoose.Schema({
+const photographySchema = new mongoose.Schema({
     product_id:{
         type:String,
         unique:true,
@@ -24,4 +24,4 @@ const boardSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('board', boardSchema);
+module.exports = mongoose.model('photography', photographySchema);

@@ -2,7 +2,7 @@ import React from 'react'
 import './Admin.scss'
 import AboutAdmin from './AboutAdmin'
 import SocialAdmin from './SocialAdmin'
-import BoardAdmin from './BoardAdmin'
+import PhotographyAdmin from './PhotographyAdmin'
 import EventsAdmin from './EventsAdmin'
 
 
@@ -43,8 +43,8 @@ const Admin = () => {
                     <br />
 
 
-                    <h4 className="admin-title">Board Component</h4>
-                    <BoardAdmin />
+                    <h4 className="admin-title">Photography Component</h4>
+                    <PhotographyAdmin />
 
 
                     <br />

@@ -1,31 +1,31 @@
-const boardSchema = require('../models/boardModel');
+const photographySchema = require('../models/photographyModel');
 
 
 //get all users
-exports.getBoard = async (req, res) => {
-    const board = await boardSchema.find();
+exports.getPhotography = async (req, res) => {
+    const photography = await photographySchema.find();
     try {
-        res.json(board);
+        res.json(photography);
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
 }
 
 //add user
-exports.addBoard = async (req, res) => {
+exports.addPhotography = async (req, res) => {
     const { title, product_id, name, description, images } = req.body;
 
     //first way async await
     try {
-        const newBoard = new boardSchema({
-            title, 
-            product_id, 
-            name, 
-            description, 
+        const newPhotography = new photographySchema({
+            title,
+            product_id,
+            name,
+            description,
             images
         })
-        await newBoard.save();
-        res.json(newBoard);
+        await newPhotography.save();
+        res.json(newPhotography);
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
@@ -42,11 +42,11 @@ exports.addBoard = async (req, res) => {
 
 
 //get user by id
-exports.getBoardID = async (req, res) => {
+exports.getPhotographyID = async (req, res) => {
     //first way
     try {
-        const board = await boardSchema.findById(req.params.id)
-        res.json(board)
+        const photography = await photographySchema.findById(req.params.id)
+        res.json(photography)
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
@@ -59,18 +59,18 @@ exports.getBoardID = async (req, res) => {
 
 
 //update user by id
-exports.updateBoard = async (req, res) => {
+exports.updatePhotography = async (req, res) => {
     try {
         const { title, product_id, name, description, images } = req.body;
-        const newBoard = await boardSchema.findByIdAndUpdate(req.params.id, {
-            title, 
-            product_id, 
-            name, 
-            description, 
+        const newPhotography = await photographySchema.findByIdAndUpdate(req.params.id, {
+            title,
+            product_id,
+            name,
+            description,
             images
         });
 
-        let results = newBoard.save()
+        let results = newPhotography.save()
         await results
         res.json({ msg: 'Items Updated' })
     } catch (error) {
@@ -80,12 +80,12 @@ exports.updateBoard = async (req, res) => {
 
 
 //delete user by id
-exports.delBoard = async (req, res) => {
+exports.delPhotography = async (req, res) => {
     try {
-        const board = await boardSchema.findByIdAndDelete(req.params.id);
+        const photography = await photographySchema.findByIdAndDelete(req.params.id);
 
-        board;
-    
+        photography;
+
         res.json({msg:"Item deleted"})
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
