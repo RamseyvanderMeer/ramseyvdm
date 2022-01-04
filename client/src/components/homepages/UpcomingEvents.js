@@ -34,7 +34,7 @@ const UpcomingEvents = () => {
     return (
         <div>
             <div className='container-event-title'>
-                <h1 className='event-page-title' >Upcoming Events:</h1>
+                <h1 className='event-page-title' >Projcets:</h1>
             </div>
             <Carousel
                 swipeable={true}

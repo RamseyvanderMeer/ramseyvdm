@@ -31,7 +31,7 @@ const Landing = () => {
                                     <div className="uiuc">van der Meer</div>
                                 </div>
                                 <i className="landing__content__text__content">
-                                    Join us for events such as tech talks, info sessions, luncheons, workshops, and socials!
+                                    Electrical Engineering Freshman at the Univerity of Illinois Urbana Champaign
                                 </i>
                                 {/* <div className="button effect">
                             <ul>

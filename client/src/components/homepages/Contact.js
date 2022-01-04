@@ -94,6 +94,12 @@ const Contact = () => {
                 </div> */}
                 <div className="contact__container__info">
                     <p className="contact__container__info__title">
+                        Phone Number:
+                    </p>
+                    <i className="contact__container__info__text">
+                        (650)569-0772
+                    </i>
+                    <p className="contact__container__info__title">
                         Email Address:
                     </p>
                     <i className="contact__container__info__text">
@@ -105,8 +111,8 @@ const Contact = () => {
                     <div className="contact-media">
                         <a href="https://github.com/ramseyvandermeer" alt="github" className="fab fa-github"></a>
                         <a href="https://www.facebook.com/ramseyvandermeer" alt="facebook" className="fab fa-facebook"></a>
-                        <a href="https://www.instagram.com/ieee.uiuc/" alt="instagram" className="fab fa-instagram"></a>
-                        {/* <a href="https://discord.gg/Gc9qPBxzbS" alt="discord" className="fab fa-discord"></a> */}
+                        <a href="https://www.instagram.com/ramseyvandermeer/" alt="instagram" className="fab fa-instagram"></a>
+                        <a href="https://discord.gg/Gc9qPBxzbS" alt="linkedin" className="fab fa-linkedin"></a>
                     </div>
                 </div>
             </div>

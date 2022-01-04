@@ -16,7 +16,7 @@ const About = () => {
             <FadeIn direction={'right'}>
                 <div className="about">
                     <div className="about__title">
-                        About Ramsey van der Meer
+                        About Me
                     </div>
                     {dataAbout && <div className="about__text">loading about...</div>}
                     {!dataAbout && <div className="about__text">
@@ -26,10 +26,10 @@ const About = () => {
                     </div>}
                     <div className="about__button-container">
                         <Link to={'/join'} className="about__button-container__button">
-                            join
+                            Learn More
                         </Link>
                         <Link to={'/board'} className="about__button-container__button">
-                            our team
+                            Photography
                         </Link>
                     </div>
                 </div>

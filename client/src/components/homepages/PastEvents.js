@@ -35,7 +35,7 @@ const PastEvents = () => {
     return (
         <div>
             <div className='container-event-title'>
-                <h1 className='event-page-title' >Past Events:</h1>
+                <h1 className='event-page-title' >Experience:</h1>
             </div>
             <Carousel
                 swipeable={true}
