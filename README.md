@@ -1,3 +1,4 @@
+# ramseyvdm website
 ramseyvdm UIUC student portfolio
 
-[ramseyvdm.com]
+webiste: [ramseyvdm.com]
